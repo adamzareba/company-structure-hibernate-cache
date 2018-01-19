@@ -34,24 +34,29 @@ Cache regions are configured via ehcache.xml file. Following regions are defined
            timeToLiveSeconds="3600" overflowToDisk="true"/>
 ```
 
-Cache bean is created via annotation:
+To enable cache mechanism `@EnableCaching` annotation is added to configuration class. Cache beans are created via annotation:
 ```java
-@Bean
-public EhCacheManagerFactoryBean ehCacheManagerFactory() {
-    EhCacheManagerFactoryBean cacheManagerFactoryBean = new EhCacheManagerFactoryBean();
-    cacheManagerFactoryBean.setConfigLocation(new ClassPathResource("ehcache.xml"));
-    cacheManagerFactoryBean.setShared(true);
+@Configuration
+@EnableCaching
+public class CacheConfiguration {
 
-    return cacheManagerFactoryBean;
-}
+    @Bean
+    public EhCacheManagerFactoryBean ehCacheManagerFactory() {
+        EhCacheManagerFactoryBean cacheManagerFactoryBean = new EhCacheManagerFactoryBean();
+        cacheManagerFactoryBean.setConfigLocation(new ClassPathResource("ehcache.xml"));
+        cacheManagerFactoryBean.setShared(true);
 
-@Bean
-public EhCacheCacheManager ehCacheCacheManager() {
-    EhCacheCacheManager cacheManager = new EhCacheCacheManager();
-    cacheManager.setCacheManager(ehCacheManagerFactory().getObject());
-    cacheManager.setTransactionAware(true);
+        return cacheManagerFactoryBean;
+    }
 
-    return cacheManager;
+    @Bean
+    public EhCacheCacheManager ehCacheCacheManager() {
+        EhCacheCacheManager cacheManager = new EhCacheCacheManager();
+        cacheManager.setCacheManager(ehCacheManagerFactory().getObject());
+        cacheManager.setTransactionAware(true);
+
+        return cacheManager;
+    }
 }
 ```
 
