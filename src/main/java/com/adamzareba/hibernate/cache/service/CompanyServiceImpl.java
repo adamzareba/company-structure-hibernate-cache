@@ -15,44 +15,44 @@ public class CompanyServiceImpl implements CompanyService {
     @Autowired
     private CompanyRepository companyRepository;
 
-    @Transactional(readOnly = true)
     @Override
+    @Transactional(readOnly = true)
     public Company get(Long id) {
         return companyRepository.find(id);
     }
 
-    @Transactional(readOnly = true)
     @Override
+    @Transactional(readOnly = true)
     public Company get(String name) {
         return companyRepository.find(name);
     }
 
-    @Transactional(readOnly = true)
     @Override
+    @Transactional(readOnly = true)
     public List<Company> getAll() {
         return companyRepository.findAll();
     }
 
-    @Transactional
     @Override
+    @Transactional
     public void create(Company company) {
         companyRepository.create(company);
     }
 
-    @Transactional
     @Override
+    @Transactional
     public Company update(Company company) {
         return companyRepository.update(company);
     }
 
-    @Transactional
     @Override
+    @Transactional
     public void delete(Long id) {
         companyRepository.delete(id);
     }
 
-    @Transactional
     @Override
+    @Transactional
     public void delete(Company company) {
         companyRepository.delete(company);
     }
