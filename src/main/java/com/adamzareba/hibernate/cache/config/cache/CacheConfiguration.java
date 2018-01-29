@@ -1,4 +1,4 @@
-package com.adamzareba.hibernate.cache.config;
+package com.adamzareba.hibernate.cache.config.cache;
 
 import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.cache.ehcache.EhCacheCacheManager;

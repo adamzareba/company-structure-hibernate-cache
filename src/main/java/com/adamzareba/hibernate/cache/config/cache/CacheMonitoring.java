@@ -1,4 +1,4 @@
-package com.adamzareba.hibernate.cache.config;
+package com.adamzareba.hibernate.cache.config.cache;
 
 import com.adamzareba.hibernate.cache.config.profile.annotation.Dev;
 
