@@ -1,6 +1,6 @@
 # Spring Boot + Hibernate Ehcache [![Build Status](https://travis-ci.org/adamzareba/company-structure-hibernate-cache.svg)](https://travis-ci.org/adamzareba/company-structure-hibernate-cache) 
 
-Example Spring Boot + Hibernate + Ehcache project for demonstration purposes of cache mechanism. 
+Example Spring Boot + Hibernate + Ehcache project for demonstration purposes of cache mechanism. Detailed explanations [here](https://dzone.com/articles/spring-hibernate-ehcache-caching)
 
 ## Getting started
 ### Prerequisites:
