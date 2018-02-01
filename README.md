@@ -112,7 +112,7 @@ public void delete(Company company) {
 ```
 - cache update
 ```java
-@Caching(evict = {@CacheEvict(value = "company.byName", allEntries = true)},
+@Caching(evict = {@CacheEvict(value = "company.byName", allEntries = true), @CacheEvict(value = "company.byId", key = "#result.id", condition = "#result != null and #result.name.toUpperCase().startsWith('TEST')")},
             put = {@CachePut(value = "company.byId", key = "#result.id", unless = "#result != null and #result.name.toUpperCase().startsWith('TEST')")})
 public Company update(Company company) {
     return entityManager.merge(company);
