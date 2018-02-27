@@ -5,6 +5,7 @@ Example Spring Boot + Hibernate + Ehcache project for demonstration purposes of 
 ## Getting started
 
 To run application:
+
 ```mvn package && java -javaagent:PATH_TO_spring-instrument-5.0.4.RELEASE.jar -jar target\company-structure-hibernate-cache-1.0-SNAPSHOT.jar```
 
 ### Prerequisites:
@@ -41,7 +42,7 @@ Cache regions are configured via ehcache.xml file. Following regions are defined
 To enable cache mechanism `@EnableCaching` annotation is added to configuration class. Cache beans are created via annotation:
 ```java
 @Configuration
-@EnableCaching
+@EnableCaching(mode = AdviceMode.ASPECTJ)
 public class CacheConfiguration {
 
     @Bean
