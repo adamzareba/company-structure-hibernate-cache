@@ -3,12 +3,13 @@ package com.adamzareba.hibernate.cache.config.cache;
 import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.cache.ehcache.EhCacheCacheManager;
 import org.springframework.cache.ehcache.EhCacheManagerFactoryBean;
+import org.springframework.context.annotation.AdviceMode;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.io.ClassPathResource;
 
 @Configuration
-@EnableCaching
+@EnableCaching(mode = AdviceMode.ASPECTJ)
 public class CacheConfiguration {
 
     @Bean

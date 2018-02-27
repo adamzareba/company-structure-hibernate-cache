@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<aspectj>
+    <weaver options="-Xset:weaveJavaxPackages=true">
+        <include within="com.adamzareba.hibernate.cache.repository.*"/>
+    </weaver>
+</aspectj>

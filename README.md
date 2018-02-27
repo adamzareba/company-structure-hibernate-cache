@@ -3,6 +3,10 @@
 Example Spring Boot + Hibernate + Ehcache project for demonstration purposes of cache mechanism. Detailed explanations [here](https://dzone.com/articles/spring-hibernate-ehcache-caching)
 
 ## Getting started
+
+To run application:
+```mvn package && java -javaagent:PATH_TO_spring-instrument-5.0.4.RELEASE.jar -jar target\company-structure-hibernate-cache-1.0-SNAPSHOT.jar```
+
 ### Prerequisites:
 - Java 8
 - Maven

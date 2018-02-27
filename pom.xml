@@ -48,6 +48,11 @@
             <artifactId>spring-hateoas</artifactId>
             <version>${spring.hateoas.version}</version>
         </dependency>
+        <!--<dependency>-->
+            <!--<groupId>org.springframework</groupId>-->
+            <!--<artifactId>spring-instrument</artifactId>-->
+            <!--<version>${spring.version}</version>-->
+        <!--</dependency>-->
 
         <dependency>
             <groupId>com.h2database</groupId>
